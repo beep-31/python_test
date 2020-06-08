@@ -1,6 +1,6 @@
 import re, pyperclip
 
-phoneRegex = re.compile('''(
+phoneRegex = re.compile(r'''(
 	(\d{3}|\(\d{3}\))?
 	(\s|-|\.)?
 	(\d{3})
