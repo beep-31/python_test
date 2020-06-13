@@ -22,11 +22,11 @@ def backupToZip(folder):
 			newBase = os.path.basename(folder) + '_'
 			if filename.endswith('.zip') and filename.startswith(newBase):
 				continue
-			backupZip.write(os.path.join(foldername, filename))
+			backupZip.write(os.path.join(foldername, filename), compress_type=ZIP_DEFLATED)
 	backupZip.close()
 	print('Finished')
 	shutil.move(os.path.join(cwd, zipFileName), folderToSave)
 
 folder = input("Write down a full path to the folder you want to zip >> ")
 
-backupToZip(folder)
+backupToZip(folder)  
